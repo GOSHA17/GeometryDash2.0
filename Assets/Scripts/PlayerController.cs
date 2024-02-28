@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canJump) //Проверка на нажатие клавиши SPACE и может ли игрок прыгать
         {
             rb.AddForce(Vector3.up*jumpForce, ForceMode2D.Impulse); //Прыжок
+            rb.AddTorque(-1f, ForceMode2D.Impulse);
             canJump = false; //игрок не может прыгать
         }
     }
